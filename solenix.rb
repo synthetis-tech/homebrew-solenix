@@ -5,21 +5,21 @@
 class Solenix < Formula
   desc "Lightweight time-series database with built-in UI"
   homepage "https://synthetis.tech"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/synthetis-tech/solenix/releases/download/v0.1.0/solenix_darwin_amd64.tar.gz"
-      sha256 "ff01f2d7f51efc8c03a41407f8fe701124941ec46b05451b4c9de72413daee8d"
+      url "https://github.com/synthetis-tech/solenix/releases/download/v0.2.0/solenix_darwin_amd64.tar.gz"
+      sha256 "ef1cf6edb945c3fe28cd4267cfcf3173a758a2b8519289d0658ed59d5c531112"
 
       define_method(:install) do
         bin.install "solenix"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/synthetis-tech/solenix/releases/download/v0.1.0/solenix_darwin_arm64.tar.gz"
-      sha256 "4e574b299abfc93e51cff61729e9425de981cbcf16d34893bbe9a1145ed17f5f"
+      url "https://github.com/synthetis-tech/solenix/releases/download/v0.2.0/solenix_darwin_arm64.tar.gz"
+      sha256 "e87a55e83d410bb58848bf15dfa9faa4e2077176aa684f1a4c50c1bb63502106"
 
       define_method(:install) do
         bin.install "solenix"
@@ -29,15 +29,15 @@ class Solenix < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/synthetis-tech/solenix/releases/download/v0.1.0/solenix_linux_amd64.tar.gz"
-      sha256 "22883d87159c6bbbf9e217c2a9a77cb447c0c7788b1be86ab2b9ed4bf95197e4"
+      url "https://github.com/synthetis-tech/solenix/releases/download/v0.2.0/solenix_linux_amd64.tar.gz"
+      sha256 "090fa4c954638f42bd6d905a973641d648b81e2e01a792b3a1b27c907a4d9b4f"
       define_method(:install) do
         bin.install "solenix"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/synthetis-tech/solenix/releases/download/v0.1.0/solenix_linux_arm64.tar.gz"
-      sha256 "f61c28de9a22d1735d47439c99ac5fd45d3997c8f718a0bf898fbdbeb7138350"
+      url "https://github.com/synthetis-tech/solenix/releases/download/v0.2.0/solenix_linux_arm64.tar.gz"
+      sha256 "d0d5464fd7d11df6075537a7021160a3870caf5a3e3f2e04b9fac19f842f40c6"
       define_method(:install) do
         bin.install "solenix"
       end
